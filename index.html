@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Now</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <h1>Weather Now</h1>
+    </header>
+
+    <main>
+        <form class="search-form" aria-label="Search weather information">
+            <label for="searchInput" class="visually-hidden">Enter city name</label>
+            <input type="search" id="searchInput" placeholder="Enter city name..." />
+            <button type="submit">Search</button>
+        </form>
+
+        <section class="weather-result">
+            <h2 class="city-title">--</h2>
+
+            <div class="weather-info">
+                <div class="temperature">
+                    <h3 class="temperature-title">Temperature</h3>
+                    <p class="temperature-value">-- <sup>ºC</sup></p>
+                    <img class="weather-icon" alt="Weather icon" src="http://openweathermap.org/img/wn/10d@2x.png" />
+                </div>
+                <div class="wind">
+                    <h3 class="wind-title">Wind</h3>
+                    <p class="wind-speed">-- <span>km/h</span></p>
+                    <div class="wind-direction">
+                        <div class="wind-pointer" style="transform: rotate(0deg)"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="alert-message" aria-live="polite"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Weather App</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
